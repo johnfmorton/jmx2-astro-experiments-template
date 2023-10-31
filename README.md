@@ -1,3 +1,55 @@
+# JMX2 template notes
+
+This is a repo that is used to make experimental layouts. It uses Astro to build the site. It is a fork of the Astro starter kit.
+
+
+## GSAP instructions
+
+This installation assume you have GSAP Business, https://gsap.com/pricing/, which requires a token from GSAP.com. See: https://gsap.com/docs/v3/Installation/ about setting up your token and creating a `.npmrc` file. The reason for this is that the GSAP Club plugins are not available on NPM.
+
+GSAP is shown in the `package.json` file has this line:
+
+```json
+"gsap": "gsap@npm:@greensock/gsap-business"
+```
+
+If you don't need the extra GSAP Club plugins, you can use the free version of GSAP. See: https://greensock.com/docs/v3/Installation
+
+You can remove that line from the `package.json` file and replace it with this line:
+
+```json
+"gsap": "gsap"
+```
+
+## Finishing Set up
+
+Now that you've got GSAP sorted, you can run the following commands to get the site up and running.
+
+
+## To run
+
+```sh
+npm install
+```
+
+```sh
+npm run dev
+```
+
+## To build for deployment
+
+```sh
+npm run build
+```
+
+You will now have a `dist` folder that you can deploy to a static site host.
+
+
+
+## Below are the original Astro starter kit notes.
+
+
+
 # Astro Starter Kit: Basics
 
 ```sh
