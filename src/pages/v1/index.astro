@@ -4,18 +4,29 @@ import { Image } from 'astro:assets'
 import "../../style/experiment1.css";
 
 import logo from "../../img/jmx2-logo-black.svg";
+import logoOutline from "../../img/jmx2-logo-outline.svg";
 ---
-<Layout title="JMX2 Experiment 1">
+<Layout title="JMX2 Experiment 1" >
+
+<div class="p-16">
+  <p class="font-bold text-center">
+    This is a test of the JMX2 layout.
+  </p>
 
 
-  <Image
-      id="jmx2Logo"
-      src={logo}
-      alt="This is the logo"
-      class="myLogo"
-     />
+    <Image
+        id="jmx2Logo"
+        src={logo}
+        alt="This is the logo"
+        class="myLogo w-[222px]"
+       />
 
-     <!-- <img src="../../images/jmx2-logo.black.svg" alt="attempt 2"> -->
+    <!--
+     You can also use the img tag, but it won't be optimized when the site is built.
+     -->
+
+      <img src={logoOutline.src} alt="Image using img tag." class="rotate-45">
+</div>
 
 </Layout>
 
@@ -23,5 +34,5 @@ import logo from "../../img/jmx2-logo-black.svg";
 <script>
   import { gsap } from "gsap";
   console.log("Hello from the script tag");
-  gsap.to("#jmx2Logo", {duration: 2, x: 100, rotation: 360});
+  gsap.to("#jmx2Logo", {duration: 2, x: 100, rotation: 360+45});
 </script>
