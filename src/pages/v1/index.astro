@@ -1,6 +1,27 @@
 ---
 import Layout from "../../layouts/LayoutJMX2.astro";
+import { Image } from 'astro:assets'
+import "../../style/experiment1.css";
+
+import logo from "../../img/jmx2-logo-black.svg";
 ---
 <Layout title="JMX2 Experiment 1">
 
+
+  <Image
+      id="jmx2Logo"
+      src={logo}
+      alt="This is the logo"
+      class="myLogo"
+     />
+
+     <!-- <img src="../../images/jmx2-logo.black.svg" alt="attempt 2"> -->
+
 </Layout>
+
+
+<script>
+  import { gsap } from "gsap";
+  console.log("Hello from the script tag");
+  gsap.to("#jmx2Logo", {duration: 2, x: 100, rotation: 360});
+</script>
